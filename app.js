@@ -2,7 +2,7 @@ var express = require('express');
 var request = require('request');
 var mysql = require('mysql');
 var connection = connectToDatabase('myHost', 'myUser', 'myPassword', 'myDatabase');
-
+//My first github
 var app = express();
 
 app.use(express.static('public'));
