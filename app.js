@@ -14,7 +14,7 @@ runGetRequest();
 function runGetRequest() {
     
     //sample URL.
-    var url = "http://140.86.15.104:3000/fighters/45/1/GREEN/pulkit5454";
+    var url = "http://140.86.15.104:3000/fighters/45/4/GREEN/pulkit5454";
     request(url, function(error, response, body) {
         if(!error) {
             console.log(body);
