@@ -1,14 +1,14 @@
 var express = require('express');
 var request = require('request');
 var mysql = require('mysql');
-var connection = connectToDatabase('myHost', 'myUser', 'myPassword', 'myDatabase');
+var connection = connectToDatabase('140.86.15.104', 'Captain', 'welcome1', 'deathstar');
 //My first github
 var app = express();
 
 app.use(express.static('public'));
 console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
-runGetRequest();
-//runDatabaseQuery(); aa
+//runGetRequest();
+runDatabaseQuery();
 
 // Does a GET request to ip.jsontest.com
 function runGetRequest() {
@@ -26,7 +26,7 @@ function runGetRequest() {
 
 //Executes a SQL query
 function runDatabaseQuery() {
-    connection.query("SELECT * FROM SampleTable", function(error, rows, fields) {
+    connection.query("SELECT * FROM SecretTable", function(error, rows, fields) {
         if(!error) {
             console.log(rows);
         } else {
